@@ -1,0 +1,27 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "omero-download"
+dynamic = [ "version" ]
+dependencies = [ "omero-py" ]
+requires-python = ">=3.8"
+description = "OMERO image downloader"
+readme = "README.md"
+license.text = "AGPL-3.0-or-later"
+keywords = ["omero", "imaging", "download"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python"
+]
+
+[project.urls]
+Homepage = "https://github.com/cellgeni/omero-download"
+Repository = "https://github.com/cellgeni/omero-download.git"
+
+[tool.hatch.version]
+path = "omero_download/__init__.py"
+
+[project.scripts]
+omero-download = "omero_download:command_line_entrypoint"
