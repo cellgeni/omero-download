@@ -1,6 +1,8 @@
 import argparse
+import json
 import logging
 import os
+import urllib.request
 
 from omero.cli import cli_login
 from omero.gateway import BlitzGateway
@@ -146,8 +148,6 @@ def command_line_entrypoint():
         exit(1)
 
     logging.info("Fetching OMERO server details...")
-    import json
-    import urllib.request
 
     with urllib.request.urlopen(
         "https://omeroplus.sanger.ac.uk/api/v0/servers/"
