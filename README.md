@@ -22,3 +22,13 @@ Downloading dataset  or project folders:
 omero-download --projects 6969 --output_dir /path/to/download
 omero-download --datasets 7337 8008 --output_dir /path/to/download
 ```
+
+# Sanger Farm Module
+To simplify the complex dependency install that omero-py has, the tool is provided as a module so it can be use without installing anything.
+```shell
+$ module load cellgen/omero-download
+** Using custom python for this environment
+** See avaiable options using: omero-download -h
+
+omero-download --images 123 456 789 --output_dir /path/to/download
+```
